@@ -68,7 +68,7 @@ var checkAllField = () => {
             $(selector).parent().removeClass('alert-danger').removeClass('alert')
         }
     });
-
+    return isOK
 }
 
 var IdentifyStrategy = () => {
@@ -82,7 +82,7 @@ $(() => {
     $('#send').on('click', () => {
 
         // 檢查是否所有必填欄位都有填到
-        checkAllField()
+        let isOK = checkAllField()
 
         // 判斷是否必要資料是否全填
         if (isOK) {
