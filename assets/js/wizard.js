@@ -71,6 +71,11 @@ var checkAllField = () => {
 
 }
 
+var IdentifyStrategy = () => {
+    Strategy.forEach((e) => {
+        console.log(e)
+    })
+}
 
 // 當HTML的文件全載入到記憶體時執行
 $(() => {
@@ -84,6 +89,8 @@ $(() => {
             // 資料已經全填
             $('#DataNotComplete').hide()
 
+            // 鑒定策略
+            IdentifyStrategy()
         } else {
             $('#DataNotComplete').show()
         }
