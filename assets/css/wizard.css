@@ -1,0 +1,8 @@
+.required {
+    color: red;
+    margin-left: 3px;
+}
+
+.return-message {
+    margin-top: 16px;
+}
