@@ -1,59 +1,59 @@
-var Strategy = [{
-    name: 'Low Volatility',
-    factor: [{
-        name: "inputMIS-EXP_PCT",
-        value: [1, 2, 3]
+var Strategy = [
+    {
+        name: 'Dividend',
+        factor: [{
+            name: "inputMoney",
+            value: [3, 4]
+        },
+        {
+            name: "inputDVD",
+            value: [3, 4]
+        },
+        ]
+    }, {
+        name: 'Low Volatility',
+        factor: [{
+            name: "inputMIS-EXP_PCT",
+            value: [1, 2, 3]
+        },
+        {
+            name: "inputRENT_PCT",
+            value: [1, 2, 3]
+        },
+        {
+            name: "inputMoney",
+            value: [3, 4]
+        },
+        {
+            name: "inputMDD",
+            value: [1, 2]
+        },
+        {
+            name: "inputReturn",
+            value: [1, 2]
+        },
+        ]
     },
     {
-        name: "inputRENT_PCT",
-        value: [1, 2, 3]
+        name: 'Growth',
+        factor: [{
+            name: "inputBouns_PCT",
+            value: [1, 2, 3]
+        },
+        {
+            name: "inputMDD",
+            value: [3, 4]
+        },
+        {
+            name: "inputReturn",
+            value: [3, 4]
+        },
+        {
+            name: "inputDVD",
+            value: [1, 2]
+        },
+        ]
     },
-    {
-        name: "inputMoney",
-        value: [3, 4]
-    },
-    {
-        name: "inputMDD",
-        value: [1, 2]
-    },
-    {
-        name: "inputReturn",
-        value: [1, 2, 3]
-    },
-    ]
-},
-{
-    name: 'Growth',
-    factor: [{
-        name: "inputBouns_PCT",
-        value: [1, 2, 3]
-    },
-    {
-        name: "inputMDD",
-        value: [3, 4]
-    },
-    {
-        name: "inputReturn",
-        value: [3, 4]
-    },
-    {
-        name: "inputDVD",
-        value: [1, 2]
-    },
-    ]
-},
-{
-    name: 'Dividend',
-    factor: [{
-        name: "inputMoney",
-        value: [3, 4]
-    },
-    {
-        name: "inputDVD",
-        value: [3, 4]
-    },
-    ]
-},
 ]
 
 // 檢查是否所有必填欄位都有填到
@@ -92,10 +92,10 @@ var IdentifyStrategy = () => {
         }
         if (factorCount == e.factor.length) {
             $('#Strategy').text(e.name)
-            return true
+            return false
         } else {
             $('#Strategy').text('General')
-            return false
+            return true
         }
 
     })
