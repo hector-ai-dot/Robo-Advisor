@@ -92,9 +92,10 @@ var IdentifyStrategy = () => {
         }
         if (factorCount == e.factor.length) {
             $('#Strategy').text(e.name)
-            return false
-        } else {
             return true
+        } else {
+            $('#Strategy').text('General')
+            return false
         }
 
     })
