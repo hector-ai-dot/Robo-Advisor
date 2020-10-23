@@ -1,6 +1,6 @@
 var Strategy = [
     {
-        name: 'Dividend',
+        name: '高配息',
         factor: [{
             name: "inputMoney",
             value: [3, 4]
