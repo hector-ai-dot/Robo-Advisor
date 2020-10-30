@@ -91,10 +91,10 @@ var IdentifyStrategy = () => {
             }
         }
         if (factorCount == e.factor.length) {
-            $('#Strategy').text(e.name)
+            $('#Strategy').text('${' + e.name + '}')
             return false
         } else {
-            $('#Strategy').text('General')
+            $('#Strategy').text('${General}')
             return true
         }
 
